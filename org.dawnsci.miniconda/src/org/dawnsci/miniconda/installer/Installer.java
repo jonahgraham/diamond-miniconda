@@ -269,7 +269,7 @@ public final class Installer implements IInstaller {
 
 		final String[] cmdarray;
 		if (PlatformUtils.isWindowsPlatform()) {
-			cmdarray = new String[] { "cmd.exe", "/c", installer.toOSString(), "TARGETDIR=" + installPath, "/qr", "/norestart" };
+			cmdarray = new String[] { "cmd.exe", "/c", installer.toOSString(), "/S" , "/D=" + installPath };
 		} else {
 			cmdarray = new String[] { installer.toOSString(), "-b", "-p", installPath};
 		}
@@ -283,8 +283,8 @@ public final class Installer implements IInstaller {
 
 		final String[] cmdarray;
 		if (PlatformUtils.isWindowsPlatform()) {
-			// TODO!!
-			cmdarray = new String[] {};
+			String condaPath = installPath + "\\Scripts\\conda";
+			cmdarray = new String[] { condaPath, "install", "--yes", "anaconda"};
 		} else {
 			String condaPath = installPath + "/bin/conda";
 			cmdarray = new String[] { condaPath, "install", "--yes", "anaconda"};
