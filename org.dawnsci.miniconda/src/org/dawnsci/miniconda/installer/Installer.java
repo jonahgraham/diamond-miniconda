@@ -114,6 +114,7 @@ public final class Installer implements IInstaller {
 
 		// Process StdErr
 		ThreadStreamReader anaInstallErr = new ThreadStreamReader(anaInstallProcess.getErrorStream(), false);
+		anaInstallErr.start();
 
 		// Process StdOut
 		final FastStringBuffer stdoutcontentsA = new FastStringBuffer(APPROX_NUM_OF_CHARS_ON_STDOUT_ANA);
