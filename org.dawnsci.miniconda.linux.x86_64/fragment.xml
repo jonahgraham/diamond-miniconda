@@ -4,7 +4,7 @@
    <extension 
          point="org.python.pydev.pydev_interpreter_provider">
       <interpreter_provider_participant 
-            class="org.eclipse.dawnsci.anaconda.InstallAnacondaFactory">
+            class="org.dawnsci.miniconda.InstallAnacondaFactory">
       </interpreter_provider_participant>
    </extension>
 
