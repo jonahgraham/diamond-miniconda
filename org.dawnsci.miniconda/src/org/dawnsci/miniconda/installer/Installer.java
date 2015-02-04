@@ -199,13 +199,16 @@ public final class Installer implements IInstaller {
 			public void run() {
 				try {
 					InputStreamReader in = new InputStreamReader(is);
-					int c;
-
-					while ((c = in.read()) != -1) {
-						handler.output("" + (char) c);
-						stdoutcontents.append((char) c);
+					BufferedReader br = new BufferedReader(in);
+					
+					String line;
+					while ((line = br.readLine()) != null) {
+						handler.output(line + "\n");
+						stdoutcontents.append(line);
 						monitor.worked(1);
 					}
+					in.close();
+					
 				} catch (Exception e) {
 					// that's ok, process has completed, thread can close
 				}
@@ -284,7 +287,7 @@ public final class Installer implements IInstaller {
 			cmdarray = new String[] {};
 		} else {
 			String condaPath = installPath + "/bin/conda";
-			cmdarray = new String[] { condaPath, "install", "--yes", "--quiet", "anaconda"};
+			cmdarray = new String[] { condaPath, "install", "--yes", "anaconda"};
 		}
 
 		return launchProcess(cmdarray, handler);
