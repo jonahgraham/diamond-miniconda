@@ -54,6 +54,7 @@ public final class Installer implements IInstaller {
 
 		// Process StdErr
 		ThreadStreamReader miniInstallErr = new ThreadStreamReader(miniInstallProcess.getErrorStream(), false);
+		miniInstallErr.start();
 
 		// Process StdOut
 		final FastStringBuffer miniStdoutContents = new FastStringBuffer(APPROX_NUM_OF_CHARS_ON_STDOUT_MINI);
