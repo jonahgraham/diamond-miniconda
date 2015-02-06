@@ -11,3 +11,6 @@ Require-Bundle: org.eclipse.ui,
  org.apache.commons.io;bundle-version="2.4.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: org.dawnsci.miniconda,
+ org.dawnsci.miniconda.installer,
+ org.dawnsci.miniconda.wizards
