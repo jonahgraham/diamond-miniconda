@@ -1,6 +1,8 @@
 The names of the platform-specific Miniconda installers are specified in:
     org.dawnsci.miniconda.linux.x86_64/installer/miniconda_installer.txt
+    org.dawnsci.miniconda.linux.x86_32/installer/miniconda_installer.txt
     org.dawnsci.miniconda.win32.x86_64/installer/miniconda_installer.txt
+    org.dawnsci.miniconda.win32.x86_32/installer/miniconda_installer.txt
 
 The names specified there must match the names specified in:
     org.dawnsci.miniconda.feature/build.properties
