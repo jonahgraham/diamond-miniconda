@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Windows X86_32 Fragment for Miniconda Installer
+Bundle-SymbolicName: org.dawnsci.miniconda.win32.x86_32;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Fragment-Host: org.dawnsci.miniconda;bundle-version="1.0.0.qualifier"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Eclipse-PlatformFilter: (& (osgi.os=win32) (osgi.arch=x86))
+Bundle-Vendor: Diamond Light Source

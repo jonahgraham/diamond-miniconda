@@ -1,0 +1,9 @@
+# Ignores that are common to all Eclipse GDA plugin projects
+/bin
+
+# Ignores that are specific to this Eclipse project
+installer/Miniconda_*.sh
+installer/Miniconda_*.msi
+installer/Miniconda_*.dmg
+installer/Miniconda_*.exe
+
