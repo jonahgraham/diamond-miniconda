@@ -1,1 +1,1 @@
-Miniconda-3.8.3-Windows-x86_64.exe
+Miniconda-latest-Windows-x86_64.exe
